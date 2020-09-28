@@ -111,10 +111,10 @@ main .gallery .image-container .image-gallery {
 }
 main .categories {
   display: flex;
+  flex-direction: row;
   width: 100%;
   max-width: 100vw;
   overflow-x: auto;
-  padding: 9px 0 8px;
   /* Track */
   /* Handle */
 }
@@ -132,10 +132,55 @@ main .categories::-webkit-scrollbar-thumb {
 main .categories .button-container {
   display: flex;
   flex-direction: column;
+  margin: 6px;
+}
+main .categories .button-container button {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #262626;
+  width: auto;
+  height: 32px;
+  border-radius: 6px;
   padding: 0 10px;
+  background-color: #fff;
+  border: 1px solid rgba(60, 60, 67, 0.18);
+  cursor: pointer;
+}
+main .categories .button-container button:focus {
+  outline: none;
+}
+main .categories .button-container a {
+  cursor: pointer;
+  text-decoration: none;
+}
+main .categories .button-container .button-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: auto;
+  border-radius: 6px;
+  padding: 0 10px;
+  background-color: #fff;
+  border: 1px solid rgba(60, 60, 67, 0.18);
+}
+main .categories .button-container .button-icon span {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #262626;
+}
+main .categories .button-container .button-icon img {
+  width: 12px;
+  height: 14px;
+  margin-right: 6px;
 }
 @media screen and (min-width: 768px) {
-  main::-webkit-scrollbar {
+  main .categories::-webkit-scrollbar {
     display: none;
   }
 }
